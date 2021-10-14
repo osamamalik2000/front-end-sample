@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/header.css" type="text/css" />
+    <link rel="stylesheet" href="./css/content.css" type="text/css" />
+    <link rel="stylesheet" href="./css/body.css" type="text/css" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+    </style>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      type="text/css"
+    />
+    <title>Blog</title>
+  </head>
+  <body>
+    <header>
+      <div class="d-flex justify-content-between mt-1 headcontainer">
+        <img src="./assets/header/whole.svg" alt="Logo" />
+        <div class="searchbar">
+          <i class="fa fa-search position-absolute m-2"></i>
+          <input
+            class="search"
+            type="text"
+            placeholder="Search for your favorite group in ATG"
+          />
+        </div>
+        <h6>
+          <span>Create account. </span
+          ><span
+            ><button class="btn m-0 p-0 text-info" id="open">
+              It's free!<img src="./assets/header/Vector.svg" alt="" />
+            </button>
+          </span>
+        </h6>
+      </div>
+    </header>
+    <div class="content">
+      <!-- For adding black transparent layer before the content -->
+      <div class="contbg"></div>
+      <!-- Background image -->
+      <div class="text">
+        <h1>Computer Engineering</h1>
+        <h5>142,765 Computer Engineers follow this</h5>
+      </div>
+    </div>
+
+    <!-- Body and content contaning article and stuff -->
+    <nav class="mt-3 bodycontainer">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="bodyNav m-0">
+          <ul class="d-flex justify-content-evenly m-0">
+            <a href=""><li class="p-2">All Posts(32)</li></a>
+            <a href=""><li class="p-2">Article</li></a>
+            <a href=""><li class="p-2">Event</li></a>
+            <a href=""><li class="p-2">Education</li></a>
+            <a href=""><li class="p-2">Jobs</li></a>
+          </ul>
+        </div>
+        <div class="bodybtn">
+          <button class="btn btn-secondary">Write a post</button>
+          <button class="btn btn-primary">Join group</button>
+        </div>
+      </div>
+      <hr width="100%" />
+      <!-- styles in body.css -->
+      <div class="parent d-flex">
+        <!-- Posts div -->
+        <div class="posts m-0">
+          <!-- Single Post 1 -->
+          <div class="post mb-3">
+            <div>
+              <img src="./assets/posts/wild.svg" alt="Image" />
+              <h5 class="m-3"><b>✍️ Article</b></h5>
+              <div
+                class="d-flex justify-content-between align-items-center m-3"
+              >
+                <h4 style="width: 80%; overflow: visible">
+                  <b
+                    >What if famous brands had regular fonts? Meet
+                    RegulaBrands!</b
+                  >
+                </h4>
+                <i
+                  class="fa fa-ellipsis-h mx-3 pr-2"
+                  style="font-size: 1.5rem"
+                ></i>
+              </div>
+              <p class="text-muted mx-3" style="height: 2em; overflow: hidden">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                expedita neque, animi dolor iure molestias ipsum quaerat,
+                corporis facilis itaque alias rerum eum id placeat beatae, ullam
+                illo sint praesentium.
+              </p>
+              <!-- User and views and share options -->
+              <div
+                class="
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mx-3
+                  mt-1
+                "
+              >
+                <div class="d-flex justify-content-start align-items-center">
+                  <img
+                    src="./assets/users/sarthak.svg"
+                    style="width: 3rem; height: 3rem"
+                    alt=""
+                  />
+                  <h6 class="mx-3"><b>Sarthak Kamra</b></h6>
+                </div>
+                <div class="d-flex justify-content-end align-items-center">
+                  <div>
+                    <i class="fa fa-eye text-muted"
+                      ><span class="mx-1">1.4k views</span></i
+                    >
+                  </div>
+                  <h6 class="mx-3 fa fa-share-alt m-0"></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Single Post 2 -->
+          <div class="post mb-3">
+            <div>
+              <img src="./assets/posts/door.svg" alt="Image" />
+              <h5 class="m-3"><b>🔬 Education</b></h5>
+              <div
+                class="d-flex justify-content-between align-items-center m-3"
+              >
+                <h4 style="width: 80%; overflow: visible">
+                  <b
+                    >Tax Benefits for Investment under National Pension Scheme
+                    launched by Government</b
+                  >
+                </h4>
+                <i
+                  class="fa fa-ellipsis-h mx-3 pr-2"
+                  style="font-size: 1.5rem"
+                ></i>
+              </div>
+              <p class="text-muted mx-3" style="height: 2em; overflow: hidden">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                expedita neque, animi dolor iure molestias ipsum quaerat,
+                corporis facilis itaque alias rerum eum id placeat beatae, ullam
+                illo sint praesentium.
+              </p>
+              <!-- User and views and share options -->
+              <div
+                class="
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mx-3
+                  mt-1
+                "
+              >
+                <div class="d-flex justify-content-start align-items-center">
+                  <img
+                    src="./assets/users/Sarah.svg"
+                    style="width: 3rem; height: 3rem"
+                    alt=""
+                  />
+                  <h6 class="mx-3"><b>Sarah West</b></h6>
+                </div>
+                <div class="d-flex justify-content-end align-items-center">
+                  <div>
+                    <i class="fa fa-eye text-muted"
+                      ><span class="mx-1">1.4k views</span></i
+                    >
+                  </div>
+                  <h6 class="mx-3 fa fa-share-alt m-0"></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Single Post 3 -->
+          <div class="post mb-3">
+            <div>
+              <img src="./assets/posts/car.svg" alt="Image" />
+              <h5 class="m-3"><b>📝 Meetup</b></h5>
+              <div
+                class="d-flex justify-content-between align-items-center m-3"
+              >
+                <h4 style="width: 80%; overflow: visible">
+                  <b>Finance & Investment Elite Social Mixer @Lujiazui</b>
+                </h4>
+                <i
+                  class="fa fa-ellipsis-h mx-3 pr-2"
+                  style="font-size: 1.5rem"
+                ></i>
+              </div>
+              <p class="text-muted mx-3" style="height: 2em; overflow: hidden">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                expedita neque, animi dolor iure molestias ipsum quaerat,
+                corporis facilis itaque alias rerum eum id placeat beatae, ullam
+                illo sint praesentium.
+              </p>
+              <!-- User and views and share options -->
+              <div
+                class="
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mx-3
+                  mt-1
+                "
+              >
+                <div class="d-flex justify-content-start align-items-center">
+                  <img
+                    src="./assets/users/Ronal.svg"
+                    style="width: 3rem; height: 3rem"
+                    alt=""
+                  />
+                  <h6 class="mx-3"><b>Ronal James</b></h6>
+                </div>
+                <div class="d-flex justify-content-end align-items-center">
+                  <div>
+                    <i class="fa fa-eye text-muted"
+                      ><span class="mx-1">1.4k views</span></i
+                    >
+                  </div>
+                  <h6 class="mx-3 fa fa-share-alt m-0"></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Address on the right side -->
+        <div class="address">
+          <!-- Adress and info -->
+          <div>
+            <!-- City name and pencil icon -->
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex justify-content-center align-items-center">
+                <i class="fa fa-map-marker mx-1"></i>
+                <p class="font-weight-bold m-0"><b>Noida, India</b></p>
+              </div>
+              <i class="fa fa-pencil"></i>
+            </div>
+            <hr />
+            <!-- msg class is self styled class in body.css -->
+            <div class="position-relative">
+              <i
+                class="
+                  fa fa-exclamation-circle
+                  position-absolute
+                  text-muted
+                  mt-1
+                  msg
+                "
+              ></i>
+              <p class="text-muted msg mx-3" style="width: 100%">
+                Your location will help us serve better and extend a
+                personalised experience.
+              </p>
+            </div>
+          </div>
+          <!-- User recommendation -->
+          <div class="groups mt-4" style="font-size: 0.8rem">
+            <!---Used groups class to stylr border for follow button in body.css-->
+            <!-- Heading -->
+            <h6 class="text-center m-4">
+              <i class="fa fa-thumbs-o-up"></i> RECOMMENDED GROUPS
+            </h6>
+            <!-- Stuff about groups -->
+            <!-- Groups -->
+            <div class="d-flex justify-content-between align-items-center my-3">
+              <!-- Group1 -->
+              <div>
+                <img src="./assets/users/Sarah.svg" alt="" />
+                <span class="mx-2"><b>Leisure</b></span>
+              </div>
+              <button class="btn btn-dark">Following</button>
+            </div>
+            <!-- Group2 -->
+            <div class="d-flex justify-content-between align-items-center my-3">
+              <div>
+                <img src="./assets/users/Ronal.svg" alt="" />
+                <span class="mx-2"><b>Activism</b></span>
+              </div>
+              <button class="btn btn-light">Follow</button>
+            </div>
+            <!-- Group3 -->
+            <div class="d-flex justify-content-between align-items-center my-3">
+              <div>
+                <img src="./assets/users/sarthak.svg" alt="" />
+                <span class="mx-2"><b>Philosophy</b></span>
+              </div>
+              <button class="btn btn-light">Follow</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Sign up modal -->
+    <div
+      class="justify-content-center align-items-centers w-60 h-100"
+      id="modal_container"
+    >
+      <div class="bg-light p-4 m-auto" id="modal-content">
+        <h6
+          class="p-3 text-success d-flex justify-content-between"
+          style="background-color: #effff4"
+        >
+          Let's learn, share & inspire each other with our passion for computer
+          engineering. Sign up now 🤘🏼
+          <span><button class="fa fa-times btn" id="close"></button></span>
+        </h6>
+        <div class="d-flex justify-content-between my-4">
+          <h4><b>Create Account</b></h4>
+          <p class="text-muted">
+            Already have an account? <a href="">Sign In</a>
+          </p>
+        </div>
+        <div class="d-flex justify-content-between">
+          <form action="" class="w-50 text-muted text-center">
+            <div class="input-group">
+              <input
+                type="text"
+                placeholder="First Name"
+                class="m-0 p-1 form-control bg-secondary bg-opacity-10"
+              />
+              <input
+                type="text"
+                placeholder="Last Name"
+                class="m-0 p-1 form-control bg-secondary bg-opacity-10"
+              />
+            </div>
+            <input
+              type="email"
+              placeholder="Email"
+              class="m-0 p-1 form-control bg-secondary bg-opacity-10"
+            />
+            <div class="position-relative">
+              <input
+                type="password"
+                placeholder="Password"
+                class="m-0 p-1 form-control bg-secondary bg-opacity-10"
+              /><span
+                class="fa fa-eye position-absolute top-0 end-0 mt-2 mx-4"
+              ></span>
+            </div>
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              class="m-0 p-1 form-control bg-secondary bg-opacity-10"
+            />
+            <button class="btn btn-primary form-control py-1 my-3 rounded-pill">
+              Create Account
+            </button>
+            <button class="btn form-control border border-2 my-2">
+              <i class="fa fa-facebook-official"
+                ><span class="mx-2">Sign up with Facebook</span></i
+              >
+            </button>
+            <button class="btn form-control border border-2">
+              <i class="fa fa-google"
+                ><span class="mx-2">Sign up with Google</span></i
+              >
+            </button>
+          </form>
+          <img
+            src="./assets/illlustration/illustration.svg"
+            alt=""
+            class="w-40"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Modal scripts -->
+    <script type="text/javascript">
+      const open = document.getElementById("open");
+      const close = document.getElementById("close");
+      const modal_container = document.getElementById("modal_container");
+      // console.log(open);
+      open.addEventListener("click", (e)=>{
+        // console.log(e);
+        modal_container.classList.add("show");
+      })
+      close.addEventListener("click", (e)=>{
+        // console.log(e);
+
+        modal_container.classList.remove("show");
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+header{
+  margin: 0 5vw;
+  padding: 0.5rem 0;
+  background: #ffffff;
+  height: 10vh;
+  width: 90vw;
+}
+.headcontainer {
+  align-items: center;
+  left: 0px;
+  top: 0px;
+}
+.searchbar {
+  position: relative;
+}
+.search {
+  border: none;
+  background: #f2f2f2;
+  height: 2.2em;
+  width: 25vw;
+  border-radius: 2rem;
+  text-align: center;
+}
+.search input {
+  position: absolute;
+  transform: translateX(2em);
+  border: none;
+  background: none;
+}
