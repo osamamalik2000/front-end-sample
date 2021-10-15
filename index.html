@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./css/header.css" type="text/css" />
     <link rel="stylesheet" href="./css/content.css" type="text/css" />
     <link rel="stylesheet" href="./css/body.css" type="text/css" />
+    <link rel="stylesheet" href="./css/modal.css" type="text/css" />
+
     <style>
       *,
       *::before,
@@ -319,7 +321,7 @@
     </nav>
     <!-- Sign up modal -->
     <div
-      class="justify-content-center align-items-centers w-60 h-100"
+      class="d-none justify-content-center align-items-centers w-60 h-100"
       id="modal_container"
     >
       <div class="bg-light p-4 m-auto" id="modal-content">
@@ -398,20 +400,23 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <!-- Modal scripts -->
+    <!-- Modal scripts to show and hide modal-->
     <script type="text/javascript">
       const open = document.getElementById("open");
       const close = document.getElementById("close");
       const modal_container = document.getElementById("modal_container");
       // console.log(open);
-      open.addEventListener("click", (e)=>{
-        // console.log(e);
-        modal_container.classList.add("show");
+      open.addEventListener("click", ()=>{
+        modal_container.classList.add("d-flex");
+        modal_container.classList.remove("d-none");
+        document.body.style.position = "fixed";   // To make the body fixed when the modal opens
+        // console.log("Added");
       })
       close.addEventListener("click", (e)=>{
-        // console.log(e);
-
-        modal_container.classList.remove("show");
+        console.log("Removed");
+        modal_container.classList.remove("d-flex");
+        modal_container.classList.add("d-none");
+        document.body.style.position = "static";  // To make the body scrollable
       })
     </script>
   </body>
