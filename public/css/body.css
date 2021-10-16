@@ -33,7 +33,6 @@
 }
 /* Style for body content posts */
 .parent {
-  display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 0px;
@@ -63,7 +62,27 @@
   margin: 1rem;
   width: 70%;
 }
+.navPc{
+  display: flex;
+}
+.navMob{
+  display: none;
+}
 /* Follow button rounded corners */
 .groups .btn{
   border-radius: 20px !important;
+}
+@media (max-width:780px){
+  .navPc{
+    display: none;
+  }
+  .navMob{
+    border: 1px solid red;
+    display:contents;
+  }
+}
+@media (max-width:890px) {
+  .address{
+    display:none;
+  }
 }

@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="img/svg" href="https://cdn.worldvectorlogo.com/logos/--21.svg">
+    <link
+      rel="icon"
+      type="img/svg"
+      href="https://cdn.worldvectorlogo.com/logos/--21.svg"
+    />
     <link rel="stylesheet" href="./css/header.css" type="text/css" />
     <link rel="stylesheet" href="./css/content.css" type="text/css" />
     <link rel="stylesheet" href="./css/body.css" type="text/css" />
@@ -41,7 +45,7 @@
   </head>
   <body>
     <header>
-      <div class="d-flex justify-content-between mt-1 headcontainer">
+      <div class="justify-content-between mt-1 headcontainer">
         <img src="./assets/header/whole.svg" alt="Logo" />
         <div class="searchbar">
           <i class="fa fa-search position-absolute m-2"></i>
@@ -54,17 +58,43 @@
         <h6>
           <span>Create account. </span
           ><span
-            ><button class="btn m-0 p-0 text-info" id="open">
+            ><button class="btn m-0 p-0 text-info open">
               It's free!<img src="./assets/header/Vector.svg" alt="" />
             </button>
           </span>
         </h6>
       </div>
+      <!-- Mobile div -->
+      <div
+        class="
+          headmobile
+          d-flex
+          justify-content-end
+          align-items-center
+          mx-4
+          mt-0
+        "
+      >
+        <img src="../public/assets/header/mobileHeadIcons.svg" alt="" />
+      </div>
     </header>
+    <!-- Body containing image of computer in content.css file -->
     <div class="content">
       <!-- For adding black transparent layer before the content -->
-      <div class="contbg"></div>
-      <!-- Background image -->
+      <!-- <span class="contbg"></span> -->
+      <div
+        class="
+          mobileButton
+          justify-content-between
+          align-items-center
+          mx-4
+          mt-3
+        "
+      >
+        <span class="fa fa-arrow-left"></span>
+        <button class="btn btn-outline-light btn-sm open">Join Group</button>
+      </div>
+      <!-- Background image in content.css-->
       <div class="text">
         <h1>Computer Engineering</h1>
         <h5>142,765 Computer Engineers follow this</h5>
@@ -73,7 +103,7 @@
 
     <!-- Body and content contaning article and stuff -->
     <nav class="mt-3 bodycontainer">
-      <div class="d-flex justify-content-between align-items-center">
+      <div class="navPc justify-content-between align-items-center">
         <div class="bodyNav m-0">
           <ul class="d-flex justify-content-evenly m-0">
             <a href=""><li class="p-2">All Posts(32)</li></a>
@@ -88,13 +118,20 @@
           <button class="btn btn-primary">Join group</button>
         </div>
       </div>
+      <!-- Mobile nav -->
+      <div class="navMob">
+        <div class="m-0 d-flex justify-content-between align-items-center">
+          <a href="" class="text-decoration-none text-muted"><span><b>Posts(32)</b></a>
+          <button class="btn btn-light">Filter: All<span><img src="../public/assets/header/Vector.svg" alt=""></span></a></button>
+        </div>
+      </div>
       <hr width="100%" />
       <!-- styles in body.css -->
       <div class="parent d-flex">
         <!-- Posts div -->
         <div class="posts m-0">
           <!-- Single Post 1 -->
-          <div class="post mb-3">
+          <div class="post mb-3 h-auto pb-1">
             <div>
               <img src="./assets/posts/wild.svg" alt="Image" />
               <h5 class="m-3"><b>✍️ Article</b></h5>
@@ -148,7 +185,7 @@
             </div>
           </div>
           <!-- Single Post 2 -->
-          <div class="post mb-3">
+          <div class="post mb-3 h-auto pb-1">
             <div>
               <img src="./assets/posts/door.svg" alt="Image" />
               <h5 class="m-3"><b>🔬 Education</b></h5>
@@ -202,7 +239,7 @@
             </div>
           </div>
           <!-- Single Post 3 -->
-          <div class="post mb-3">
+          <div class="post mb-3 h-auto pb-1">
             <div>
               <img src="./assets/posts/car.svg" alt="Image" />
               <h5 class="m-3"><b>📝 Meetup</b></h5>
@@ -322,26 +359,28 @@
     </nav>
     <!-- Sign up modal -->
     <div
-      class="d-none justify-content-center align-items-centers w-60 h-100"
+      class="d-none justify-content-center align-items-centers"
       id="modal_container"
     >
       <div class="bg-light p-4 m-auto" id="modal-content">
         <h6
-          class="p-3 text-success d-flex justify-content-between"
+          class="p-3 text-success justify-content-between hidemobile"
           style="background-color: #effff4"
         >
           Let's learn, share & inspire each other with our passion for computer
           engineering. Sign up now 🤘🏼
-          <span><button class="fa fa-times btn" id="close"></button></span>
+          <span><button class="fa fa-times btn close"></button></span>
         </h6>
         <div class="d-flex justify-content-between my-4">
           <h4><b>Create Account</b></h4>
-          <p class="text-muted">
+          <span class="hidepc"><button class="fa fa-times btn close"></button></span>
+
+          <p class="text-muted hidemobile">
             Already have an account? <a href="">Sign In</a>
           </p>
         </div>
         <div class="d-flex justify-content-between">
-          <form action="" class="w-50 text-muted text-center">
+          <form action="" class="text-muted text-center">
             <div class="input-group">
               <input
                 type="text"
@@ -390,7 +429,7 @@
           <img
             src="./assets/illlustration/illustration.svg"
             alt=""
-            class="w-40"
+            class="w-40 hidemobile"
           />
         </div>
       </div>
@@ -403,22 +442,22 @@
     ></script>
     <!-- Modal scripts to show and hide modal-->
     <script type="text/javascript">
-      const open = document.getElementById("open");
-      const close = document.getElementById("close");
+      const open = document.querySelector(".open");
+      const close = document.querySelector(".close");
       const modal_container = document.getElementById("modal_container");
       // console.log(open);
-      open.addEventListener("click", ()=>{
+      open.addEventListener("click", () => {
         modal_container.classList.add("d-flex");
         modal_container.classList.remove("d-none");
-        document.body.style.position = "fixed";   // To make the body fixed when the modal opens
+        document.body.style.position = "fixed"; // To make the body fixed when the modal opens
         // console.log("Added");
-      })
-      close.addEventListener("click", (e)=>{
+      });
+      close.addEventListener("click", (e) => {
         console.log("Removed");
         modal_container.classList.remove("d-flex");
         modal_container.classList.add("d-none");
-        document.body.style.position = "static";  // To make the body scrollable
-      })
+        document.body.style.position = "static"; // To make the body scrollable
+      });
     </script>
   </body>
 </html>

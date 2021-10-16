@@ -1,16 +1,43 @@
 /* Hide and show */
-#modal_container{
-    background: rgba(0, 0, 0, 0.3);
-    position: fixed;
+#modal_container {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: hidden;
+}
+#modal-content {
+  border-radius: 10px;
+  width: 70%;
+  height: 90%;
+}
+/* This class is used to hide the content which we do not want to see in mobile view */
+.hidemobile {
+  display: flex;
+}
+/* hide in pc and show in mobile */
+.hidepc{
+  display: none;
+}
+form {
+  width: 50%;
+}
+@media (max-width: 690px) {
+  #modal-content {
+    width: 100vw;
+    height: 80vh;
+    transform: translateY(20%);
+  }
+  .hidemobile {
+    display: none !important;
+  }
+  .hidepc{
+    display: contents;
+  }
+  form {
     width: 100%;
-    height: 100%;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    overflow-y: hidden;
   }
-  #modal-content{
-    border-radius: 10px;
-    width: 70%;
-    height: 90%;
-  }
+}

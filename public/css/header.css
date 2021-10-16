@@ -4,11 +4,16 @@ header{
   background: #ffffff;
   height: 10vh;
   width: 90vw;
+  overflow-y: hidden;
 }
 .headcontainer {
+  display: flex;
   align-items: center;
   left: 0px;
   top: 0px;
+}
+.headmobile{
+  visibility: hidden;
 }
 .searchbar {
   position: relative;
@@ -26,4 +31,19 @@ header{
   transform: translateX(2em);
   border: none;
   background: none;
+}
+
+@media (max-width: 728px){
+  header{
+    width: 100%;
+    height: auto;
+  }
+  .headcontainer{
+    display: none;
+    margin: 0;
+    padding:0
+  }
+  .headmobile{
+    visibility:visible;
+  }
 }
