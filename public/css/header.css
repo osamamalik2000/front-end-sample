@@ -36,7 +36,7 @@ header{
 @media (max-width: 728px){
   header{
     width: 100%;
-    height: auto;
+    height: 1.2rem;
   }
   .headcontainer{
     display: none;
@@ -45,5 +45,11 @@ header{
   }
   .headmobile{
     visibility:visible;
+  }
+}
+
+@media (max-width: 1225px){
+  #search{
+    display: none;
   }
 }

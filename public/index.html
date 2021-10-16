@@ -46,7 +46,7 @@
       <div class="justify-content-between mt-1 headcontainer">
         <img src="./assets/header/whole.svg" alt="Logo" />
         <div class="searchbar">
-          <i class="fa fa-search position-absolute m-2"></i>
+          <i class="fa fa-search position-absolute m-2" id="search"></i>
           <input
             class="search"
             type="text"
@@ -56,7 +56,7 @@
         <h6>
           <span>Create account. </span
           ><span
-            ><button class="btn m-0 p-0 text-info open">
+            ><button class="btn m-0 p-0 text-info" id="open">
               It's free!<img src="./assets/header/Vector.svg" alt="" />
             </button>
           </span>
@@ -70,7 +70,7 @@
           justify-content-end
           align-items-center
           mx-4
-          mt-0
+          my-0
         "
       >
         <img src="../public/assets/header/mobileHeadIcons.svg" alt="" />
@@ -79,7 +79,7 @@
     <!-- Body containing image of computer in content.css file -->
     <div class="content">
       <!-- For adding black transparent layer before the content -->
-      <!-- <span class="contbg"></span> -->
+      <span class="contbg"></span>
       <div
         class="
           mobileButton
@@ -90,7 +90,7 @@
         "
       >
         <span class="fa fa-arrow-left"></span>
-        <button class="button-54" id="open-join">Join Group</button>
+        <button class="btn btn-outline-light btn-sm my-3 mx-2" id="open1">Join Group</button>
       </div>
       <!-- Background image in content.css-->
       <div class="text">
@@ -367,11 +367,11 @@
         >
           Let's learn, share & inspire each other with our passion for computer
           engineering. Sign up now 🤘🏼
-          <span><button class="fa fa-times btn close"></button></span>
+          <span><button class="fa fa-times btn" id="close"></button></span>
         </h6>
         <div class="d-flex justify-content-between my-4">
           <h4><b>Create Account</b></h4>
-          <span class="hidepc"><button class="fa fa-times btn close"></button></span>
+          <span class="hidepc"><button class="fa fa-times btn" id="close1"></button></span>
 
           <p class="text-muted hidemobile">
             Already have an account? <a href="">Sign In</a>
@@ -441,8 +441,12 @@
     <!-- Modal scripts to show and hide modal-->
     <script type="text/javascript">
       // const open = document.querySelector(".open");
-      const open = document.getElementById("open-join"); 
-      const close = document.querySelector(".close");
+      const open = document.getElementById("open"); 
+      const open1 = document.getElementById("open1"); 
+
+      const close = document.getElementById("close");
+      const close1 = document.getElementById("close1");
+
       const modal_container = document.getElementById("modal_container");
       console.log(open);
       open.addEventListener("click", () => {
@@ -451,7 +455,19 @@
         document.body.style.position = "fixed"; // To make the body fixed when the modal opens
         console.log("Added");
       });
+      open1.addEventListener("click", () => {
+        modal_container.classList.add("d-flex");
+        modal_container.classList.remove("d-none");
+        document.body.style.position = "fixed"; // To make the body fixed when the modal opens
+        console.log("Added");
+      });
       close.addEventListener("click", (e) => {
+        console.log("Removed");
+        modal_container.classList.remove("d-flex");
+        modal_container.classList.add("d-none");
+        document.body.style.position = "static"; // To make the body scrollable
+      });
+      close1.addEventListener("click", (e) => {
         console.log("Removed");
         modal_container.classList.remove("d-flex");
         modal_container.classList.add("d-none");
